@@ -1,0 +1,27 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "npm" # Das Ökosystem für Node.js-Projekte
+    directory: "/" # Das Wurzelverzeichnis, in dem die package.json und package-lock.json Dateien liegen
+    schedule:
+      interval: "weekly" # Die Frequenz der Update-Checks: täglich, wöchentlich, monatlich etc.
+or version: 2 
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Hauptverzeichnis
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "npm"
+    directory: "/pfad/zum/unterpaket" # Pfad zum Unterverzeichnis
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "pip"
+    directory: "/pfad/zum/verzeichnis" # Pfad zum Verzeichnis, wo die pyproject.toml oder requirements.txt liegen
+    schedule:
+      interval: "weekly"
+
